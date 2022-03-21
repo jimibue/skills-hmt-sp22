@@ -1,59 +1,37 @@
-// //Example 1 resassign values
-// console.log('Example 1 resassign values')
-// let arr = ["a", "b", "c"];
-// arr[0] = "100";
-// arr[1] = "200";
+const foo =()=>{
+    return [{data:1,loading:false, err:'error'},()=>{console.log('hello')}]
+}
 
-// console.log(arr); // [ '100', '200', 'c' ]
+let [t,s] = foo()
+let [{data,loading,err}, yoyo] = foo()
+console.log(t)//{data:1,loading:false, err:'error'}
+console.log(s)// function
+console.log(data)// 1
+console.log(loading)// false
+console.log(err)// 'error'
+s() // hello
 
-// //Example 2 Destructor
-// console.log('Example 2 Destructor')
-// let arr1 = ["a", "b", "c"];
-// // declaring two NEW variables x and y here
-// let [x, y] = arr1;
-
-// console.log(x); //'a'
-// console.log(y); // 'b'
-// console.log(arr1); // [ 'a', 'b', 'c' ]
-
-// //Example 3 reassign values with destructuring and hardcoded values
-// console.log('Example 3 reassign values with destructuring ')
-// let arr2 = ["a", "b", "c"]; // NOTE:need semi colon here....?
-
-// // destructoring the values'9999', '1234132' in to position arr[0] and arr[1]
-// [arr2[0], arr2[1]] = ["9999", "1234132"];
-
-// console.log(arr2); // [ '9999', '1234132', 'c' ]
-
-// //Example 4 reassign values with destructuring and values from array
-// console.log('Example 4 reassign values with destructuring ')
-// let arr3 = ["a", "b", "c"]; // NOTE:need semi colon here....?
-
-// // destructuring the values'9999', '1234132' in to position arr[0] and arr[1]
-// [arr3[0], arr3[1]] = [arr3[1], arr3[0]];
-
-// //really just
-// //[arr3[0], arr3[1]] = ['b', 'c'];
-
-// console.log(arr3); // [ 'b', 'a', 'c' ]
+//
+let arr = [1,2]
 
 
-// another example of array reassigning variables  with array destructuring
-let x = 1;
-let y = 2;
+// array destructoring
+// declaring to variable called x,y
+// let x = arr[0]
+// let y = arr[1]
 
-[x, y] = ["a", "b"];
+// the order is important here, not the names of variable
+let [x,y] = arr
+console.log(x)
+console.log(y)
 
-console.log(x); //'a'
-console.log(y); //'b'
+let obj = {a:3,b:4}
+// obj destructoring
+// declaring to variable called a,b
+// the order is not important here, the names of variable is, has to match key
+// let {b, a:newNameYo} = obj
+// console.log(newNameYo) 3
 
-
-// another example of array reassigning variables  with array destructuring
-// this case would swap values
-let foo = 1;
-let bar = 2;
-
-[foo, bar] = [bar, foo];
-
-console.log(foo); //2
-console.log(bar); //1
+let {b,a} = obj
+console.log(a)
+console.log(b)

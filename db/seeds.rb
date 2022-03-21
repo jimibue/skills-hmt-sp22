@@ -21,7 +21,7 @@ require 'faker'
 
 
 
-5.times do
+1000.times do
  user = User.create(name: Faker::Name.name)
  
 # each user will have a grade for each skill
