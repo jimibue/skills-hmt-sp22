@@ -18,6 +18,7 @@ function App() {
           <Link to="/users">Users</Link>-
           <Link to="/skills">Skills</Link>-
           <Link to="/grades">Grades</Link>-
+          <Link to="/grades/new">New Grade</Link>-
          <Link to="/about">About</Link>
         </nav>
       </nav>

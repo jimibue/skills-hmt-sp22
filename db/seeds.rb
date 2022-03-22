@@ -21,15 +21,15 @@ require 'faker'
 
 
 
-1000.times do
+10.times do
  user = User.create(name: Faker::Name.name)
  
 # each user will have a grade for each skill
  
- 5.times do |i|
-  # ASSUMES SKILLS HAVE IDS 1-5 
-  Grade.create(user_id: user.id, skill_id: i+1, score: rand(100))
- end
+#  5.times do |i|
+#   # ASSUMES SKILLS HAVE IDS 1-5 
+#   Grade.create(user_id: user.id, skill_id: i+1, score: rand(100))
+#  end
 end
 
 puts "SKILLZZ SIZE: #{Skill.all.length}"

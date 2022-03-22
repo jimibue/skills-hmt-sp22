@@ -8,5 +8,8 @@ Rails.application.routes.draw do
     resources :skills
     resources :grades
     resources :users
+
+    post 'users/:id/grades', to: "grades#create_with_user"
+    post 'skills/:id/grades', to: "grades#create_with_skill"
   end
 end

@@ -10,7 +10,8 @@ import Home from "./pages/Home";
 import Users from "./pages/Users";
 import Skills from "./pages/Skills";
 import Grades from "./pages/Grades";
-
+import GradeForm from "./components/GradeForm";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const NotFound = ()=>{
   return <p>path not found</p>
@@ -27,6 +28,7 @@ ReactDOM.render(
           <Route path="/users" element={<Users />} />
           <Route path="/skills" element={<Skills />} />
           <Route path="/grades" element={<Grades />} />
+          <Route path="/grades/new" element={<GradeForm />} />
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>

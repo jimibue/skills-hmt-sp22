@@ -15,7 +15,6 @@ const List = ({list, renderItem})=>{
     }
     return(
         <div>
-           <p>you have {list.length} things in your list</p>
            {renderList()}
         </div>
     )
