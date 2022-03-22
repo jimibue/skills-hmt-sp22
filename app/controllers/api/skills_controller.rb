@@ -3,9 +3,7 @@ class Api::SkillsController < ApplicationController
   
     def index
       skills = Skill.all
-      person = {name:'jon', age:2}
-      #person is hash is converted json and is sent to client
-      render json: person
+      render json: skills
     end
   
     def show
