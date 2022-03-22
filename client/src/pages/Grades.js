@@ -7,7 +7,7 @@ const Grades = ()=>{
  
     return (
         <AxiosContainer title={'Grades'} loading={loading} error={error}>
-            <StringifyJSON json={data}/>
+            <StringifyJSON data={data}/>
         </AxiosContainer>
     )
 }

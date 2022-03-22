@@ -1,14 +1,20 @@
 import useAxios from 'axios-hooks'
+import Card from './Card'
 
+// This component is where we are handle like loading/Error UI
 // const Users = (props)=>{
     const AxiosContainer = ({title,loading, error,children})=>{
-    if(loading)return <p>Loading SPINNER</p>
-    if(error)return <p>Error</p>
+
+    const renderBody = ()=>{
+        if(loading)return <p style={{color:'pink'}}>Loading BETTER SPINNER</p>
+        if(error)return <p>Error</p>
+         return children
+    }
     return (
-        <div>
+        <Card>
            <h1>{title}</h1>
-            {children}
-        </div>
+           {renderBody()}
+        </Card>
     )
 }
 
